@@ -1,0 +1,172 @@
+#container{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width:728px;
+    height: 90px;
+    border:1px solid #000000;
+    box-sizing: border-box;
+}
+
+#hotspot {
+    position: absolute;
+    top:0px;left:0px;
+    height: 100%;
+    width:100%;
+    cursor: pointer;
+    z-index: 150;
+} 
+
+#bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+    background-color: #fdd631;
+   /* background-image: url(img/ng_bkg_300x250.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;*/
+    box-sizing: border-box;
+}
+
+.startZero{
+	opacity:0;
+}
+
+img{
+    position: absolute;
+}
+
+.eggoLogoFluffy {
+    position: absolute;
+	width: 200px;
+	height: 200px;
+	left: 0;
+	top: 0;
+}
+
+.eggoLogoFluffy svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.waffle {
+	right: -10px;
+	bottom: -10px;
+	width: 231.5px;
+	height: 110px;
+}
+
+.line1 {
+    top: 32px;
+    width: auto;
+	height: 26px;
+}
+
+.line2 {
+    top: 209px;
+}
+
+.txt_L1W1 {
+	left: 184px;
+}
+
+.txt_L1W2 {
+	left: 234px;
+}
+
+.txt_L2W3 {
+	left: 300px;
+}
+
+.txt_L2W4 {
+	left: 350px;
+}
+
+.txt_L2W5 {
+	left: 384px;
+}
+
+.box {
+	width: 241.5px;
+	height: 90px;
+	right: 225px;
+	bottom: -1px;
+}
+
+/*.txt_LYE {
+    width: 242px;
+    height: 53px;
+    left: 36px;
+	top: 12px;
+}*/
+
+.ctaImg {
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.cta {
+	width: 148px;
+	height: 40px;
+	position: absolute;
+	right: 23px;
+	top: 24px;
+	overflow: hidden;
+}
+
+.eggoLogo {
+    width: 88px;
+    left: 20px;
+    top: 25px;
+}
+
+.leggo {
+	left: 11px;
+	top: 15px;
+	width: 112px;
+	height: 47px;
+}
+
+.your {
+	left: 127px;
+	top: 22px;
+	width: 61px;
+	height: 36px;
+}
+
+.eggoLogo2 {
+	width: 86px;
+	left: 192px;
+	top: 0px;
+	height: 60px;
+}
+.tagline {
+    position: relative;
+    top: 9px;
+    left: 9px;
+}
+
+.line3 {
+    top: 251px;
+}
+
+svg {
+    position: absolute;
+    z-index: 5000;
+}
+
+.txt_LogoFluffy {
+	left: 193px;
+	width: 264px;
+	top: 31px;
+	height: 28px;
+}
+
+.legal{
+    right: 210px;
+    bottom: 6px;
+}

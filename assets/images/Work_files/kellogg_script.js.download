@@ -1,0 +1,81 @@
+var container,adTl;
+
+window.onload = function() {
+    container = document.getElementById("container_dc");
+   	adTl = new TimelineMax({repeat:0,repeatDelay:1.5});
+    hotspot = document.getElementById('hotspot');
+   
+		
+    addListeners();
+};
+
+addListeners = function() {
+    //CTA/LOGO/GENERAL HOTSPOT EVENTS - REMOVE ONLY WITH CARE
+    hotspot.addEventListener("click", onHotSpotClick, false);
+    // ALL ADDITIONAL EVENT LISTNERS GO BELOW IN THIS FUNCTION
+    TweenMax.to(".wrapper", 0.15, {opacity:1, ease:Power1.easeIn})
+    startAnimation();
+};
+
+function onHotSpotClick(){
+    window.open(window.clickTag,'_blank');
+}
+ 
+startAnimation = function() {
+    adTl.add("startAd")
+        //.set("#eggoOutline", {scale:1.2, tranformOrigin:"0% 0%", x:5, y:5})
+    
+       .add('F1Out', "+=0.75")
+         .to(".waffle", 0.45, {scale:0.9,  ease: Back. easeOut.config( 2.5), transformOrigin:"100% 100%"}, "F1Out+=0.0")
+        .to(".txt_LogoFluffy", 0.45, {autoAlpha:0,  ease:Power3.easeOut}, "F1Out+=0.0")
+    
+    
+        .add('wordsIn', '+=0.25')
+        .set([".txt_L1W1",".txt_L1W2",".txt_L2W3",".txt_L2W4",".txt_L2W5"], {opacity:1}, "wordsIn")
+        .from(".txt_L1W1", 0.35, {scale:0.0, ease: Back. easeOut.config( 3)}, "wordsIn")
+        .from(".txt_L1W2", 0.35, {scale:0.0, ease:  Back. easeOut.config( 3)}, '-=0.1')
+        .from(".txt_L2W3", 0.35, {scale:0.0, ease:  Back. easeOut.config( 3)}, '+=0.0')
+        .from(".txt_L2W4", 0.35, {scale:0.0, ease:  Back. easeOut.config( 2)}, '-=0.2')
+        .from(".txt_L2W5", 0.35, {scale:0.0, ease:  Back. easeOut.config( 1.5)}, '-=0.2')
+    
+   
+        .to("#eggoOutline", 0.4, {scale:1.0, x:5, y:0,  ease:Power3.easeOut}, "F1Out")
+        .to(".ArcTextThickFluffy", 0.8, {autoAlpha:1,  ease:Power3.easeOut}, "F1Out+=0.25")
+         
+
+       .to([".line1", ".line2", ".line3", ".waffle", ".eggoLogoFluffy"], 0.75, {autoAlpha:0,  ease:Power3.easeOut}, "+=0.85")
+    
+    
+    
+       .add('F3In', '-=0.05')
+        //.set(".box", {opacity:1}, 'F3In+=0.0')
+        .set(".tagline", {opacity:1}, 'F3In+=0.0')
+ 
+        .fromTo(".box", 0.95, {x:450, opacity:0},{x:0, opacity:1,  ease:Power4.easeOut}, "F3In+=0.0") 
+    
+        .fromTo(".tagline", 0.85, {scale:0.0, y:45, x:-200}, {scale:1.0, x:0, y:0,ease: Power4.easeOut}, "-=0.65")
+        .to(".cta", 1.25, {autoAlpha:1,  ease:Power3.easeOut}, "-=0.55")
+    
+        .to(".your", 0.65, {scale:1.25, yoyo:true, repeat:1, ease: Back. easeIn.config( 3)}, "-=0.55")
+     
+    
+       
+        
+     
+
+};
+
+Element.prototype.hasClass = function(className) {
+    return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+};
+
+Element.prototype.removeClass = function(cls) {
+  if (this.hasClass(cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    this.className=this.className.replace(reg,' ');
+  }
+}
+
+Element.prototype.addClass = function (cls) {
+  if (!this.hasClass(cls)) this.className += " "+cls;
+}

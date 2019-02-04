@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- saved from url=(0096)https://s0.2mdn.net/3632474/1538687762962/300x250/Hampton_RealTravel_Yards_LeadRate_300x250.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="ad.size" content="width=300,height=250">
+    <title>7703-Hampton-Yards-HTML-and-Static 300x250</title>
+    <script src="./TweenMax.min.js.download"></script>
+<style>
+		/* Main */
+ 		body, html, body, * {
+            margin: 0px;
+            padding: 0px;
+            border: 0;
+        }
+		#container, #container > div {
+            width: 300px;
+            height: 250px;
+            position: absolute;
+        }
+		#container {
+            overflow: hidden;
+            cursor: pointer;
+        }
+        #border {
+            width: 298px !important;
+            height: 248px !important;
+            border: 1px solid #0c121c;
+            background-color: transparent
+        }
+		#hero {
+			width: 300px;
+			height: 250px;
+			background: #181c6b;
+		}
+		/* Assets */
+		#preloader {
+            background-color: #FFFFFF;
+			z-index: 100;
+        }
+</style>
+<script>
+var clickTag = ""; console.log(clickTag);
+</script>
+<script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script></head>
+<body>
+	<div id="container" onclick="javascript:window.open(window.clickTag);void(0)">
+    
+    <!-- Hero Background -->
+    <div id="hero"></div>
+    
+    <!-- Timeline Scene 1 -->
+    <div id="hero_1"><img src="./hero_1(1).png" alt="Foam hand placed on a seat within the stands of a stadium"></div>
+    <div id="text_1" style="opacity: 0.938768; transform: matrix3d(1, 1.0687e-05, 0, 0, -1.0687e-05, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"><img src="./text_1(1).png" alt="you went 300 miles"></div>
+    
+    <!-- Timeline Scene 2 -->
+    <div id="hero_2" style="opacity: 0; transform: matrix(0.99999, 0.00017, -0.00017, 0.99999, 0, 0);"><img src="./hero_2(1).png" alt="Fan holding head in hands, sitting in the stands at a stadium"></div>
+    <div id="text_2" style="opacity: 0; transform: matrix(0.99999, 0.00017, -0.00017, 0.99999, 0, 0);"><img src="./text_2(1).png" alt="They couldn&#39;t go 30 yards"></div>
+    
+    <!-- Timeline Scene 3 -->
+    <div id="hero_3" style="opacity: 0; transform: matrix(0.99999, 0.00017, -0.00017, 0.99999, 0, 0);"><img src="./hero_3.png" alt="Waffles breakfast"></div>
+    <div id="text_3" style="opacity: 0; transform: matrix(0.99999, 0.00017, -0.00017, 0.99999, 0, 0);"><img src="./text_3(1).png" alt="AT LEAST YOU SCORED WITH a FREE, HOT BREAKFAST"></div>
+    
+    <!-- Timeline Scene 4 -->
+    <div id="text_4" style="opacity: 0; transform: matrix(0.99999, 0.00017, -0.00017, 0.99999, 0, 0);"><img src="./text_4.png" alt="Rates from $109*. *Subject to availability."></div>
+
+    
+    <!-- Hilton Logo and Book Now -->
+    <div id="frame"><img src="./frame(1).png" alt="white frame"></div>
+    <div id="cta"><img class="cta" src="./hilton-section(1).png" alt="Hampton by Hilton. Book Now"></div>
+    
+    <!-- Preloader -->
+    <div id="preloader" style="visibility: hidden; opacity: 0;"></div>
+    
+    <!-- Container Border -->    
+    <div id="border"></div>
+    
+    </div>
+    
+    
+<script>
+/* Declare Variables */
+var masterTimeline = new TimelineMax({paused:true,repeat:0,repeatDelay:0}),
+	tl1 = new TimelineMax({delay: 0.2}),
+	tl2 = new TimelineMax({delay: 3.6}),
+	tl3 = new TimelineMax({delay: 6.7}),
+	tl4 = new TimelineMax({delay: 9.7}),
+	tweenDelay = 0;
+	
+
+/* Timeline Scene 1 */ 
+	tl1
+	.from(text_1, 2.0,{ opacity:0, rotation:0.01, ease:Power4.easeOut })
+	.to([text_1,hero_1], 2.0,{ opacity:0, rotation:0.01, ease:Power4.easeOut }, +"2.5");
+
+/* Timeline Scene 2 */ 
+	tl2
+	.from([text_2,hero_2], 2.0,{ opacity:0, rotation:0.01, ease:Power4.easeOut })
+	.to([text_2,hero_2], 2.0,{ opacity:0, rotation:0.01, ease:Power4.easeOut }, +"2.5");
+
+/* Timeline Scene 2 */ 
+	tl3
+	.from([text_3,hero_3], 2.0,{ opacity:0, rotation:0.01, ease:Power4.easeOut })
+	.to([text_3,hero_3,cta,frame], 2.0,{ opacity:0, rotation:0.01, ease:Power4.easeOut }, +"2.5");	
+	
+/* Timeline Scene 3 */ 
+	tl4
+	.from([text_4], 1.0,{ opacity:0, rotation:0.01, ease:Power4.easeIn });
+	
+
+masterTimeline.add([tl1,tl2,tl3,tl4]);	
+
+	
+/* Initialize */
+	function init() {
+		console.log("Init");
+			TweenLite.to(preloader, 0.4, {  autoAlpha: 0 });
+			}
+			window.onload = function() {
+				init();
+				masterTimeline.play();
+	 };
+</script>    
+
+
+
+</body></html>

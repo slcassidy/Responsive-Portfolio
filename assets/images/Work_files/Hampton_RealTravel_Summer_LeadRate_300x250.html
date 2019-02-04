@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)https://s0.2mdn.net/3632474/1538687955595/300x250/Hampton_RealTravel_Summer_LeadRate_300x250.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="ad.size" content="width=300,height=250">
+    <title>7724-[HAM]-Fall-updates-to-Summer-Sunday-Real-Travel-Banner- HTML5 300x250</title>
+    <script src="./TweenMax.min.js.download"></script>
+<style>
+		/* Main */
+ 		body, html, body, * {
+            margin: 0px;
+            padding: 0px;
+            border: 0;
+        }
+		#container, #container > div {
+            width: 300px;
+            height: 250px;
+            position: absolute;
+        }
+		#container {
+            overflow: hidden;
+            cursor: pointer;
+        }
+        #border {
+            width: 298px !important;
+            height: 248px !important;
+            border: 1px solid #0c121c;
+            background-color: transparent
+        }
+		#hero {
+			width: 300px;
+			height: 250px;
+			background: #181c6b;
+		}
+		/* Assets */
+		#preloader {
+            background-color: #FFFFFF;
+			z-index: 100;
+        }
+</style>
+<script>
+var clickTag = ""; console.log(clickTag);
+</script>
+<script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script></head>
+<body>
+	<div id="container" onclick="javascript:window.open(window.clickTag);void(0)">
+    
+    <!-- Hero Background -->
+    <div id="hero"></div>
+    <div id="hero_2"><img src="./hero_2.png" alt="Footbal coach talking to football player"></div>
+    <div id="hero_1"><img src="./hero_1.png" alt="Boy and girl, laughing while having breakfast"></div>
+    
+    <!-- Timeline Scene 1 -->
+    <div id="text_1" style="opacity: 0.346274; transform: matrix3d(1, 0.000114097, 0, 0, -0.000114097, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"><img src="./text_1.png" alt="First, free hot breakfast in the lobby "></div>
+    
+    <!-- Timeline Scene 2 -->
+    <div id="text_2" style="opacity: 0; transform: matrix(0.99999, 0.00017, -0.00017, 0.99999, 0, 0);"><img src="./text_2.png" alt="Then, Fun fall festivities"></div>
+    
+    <!-- Timeline Scene 3 -->
+    <div id="text_3" style="opacity: 0; transform: matrix(0.99999, 0.00017, -0.00017, 0.99999, 0, 0);"><img src="./text_3.png" alt="Rates from $109*. *Subject to availability. Hampton by Hilton. Book Now"></div>
+    
+    <!-- Hilton Logo and Book Now -->
+    <div id="frame"><img class="frame" src="./frame.png" alt="White frame"></div>
+    <div id="cta"><img class="cta" src="./hilton-section.png" alt="Hampton by Hilton. Book Now"></div>
+    
+    <!-- Preloader -->
+    <div id="preloader" style="visibility: inherit; opacity: 0.00855625;"></div>
+    
+    <!-- Container Border -->    
+    <div id="border"></div>
+    
+    </div>
+    
+    
+<script>
+/* Declare Variables */
+var masterTimeline = new TimelineMax({paused:true,repeat:0,repeatDelay:0}),
+	tl1 = new TimelineMax({delay: 0.2}),
+	tl2 = new TimelineMax({delay: 3.4}),
+	tl3 = new TimelineMax({delay: 6.5}),
+	tweenDelay = 0;
+	
+
+/* Timeline Scene 1 */ 
+	tl1
+	.from(text_1, 2.0,{ opacity:0, rotation:0.01, ease:Power4.easeOut })
+	.to([text_1,hero_1], 2.0,{ opacity:0, rotation:0.01, ease:Power4.easeOut }, +"2.5");
+
+/* Timeline Scene 2 */ 
+	tl2
+	.from([text_2], 2.0,{ opacity:0, rotation:0.01, ease:Power4.easeOut })
+	.to([text_2,hero_2,cta,frame], 2.0,{ opacity:0, rotation:0.01, ease:Power4.easeOut }, +"2.5");
+
+/* Timeline Scene 2 */ 
+	tl3
+	.from([text_3], 1.0,{ opacity:0, rotation:0.01, ease:Power4.easeIn });	
+	
+
+masterTimeline.add([tl1,tl2,tl3]);	
+
+	
+/* Initialize */
+	function init() {
+		console.log("Init");
+			TweenLite.to(preloader, 0.4, {  autoAlpha: 0 });
+			}
+			window.onload = function() {
+				init();
+				masterTimeline.play();
+	 };
+</script>    
+
+
+
+</body></html>
