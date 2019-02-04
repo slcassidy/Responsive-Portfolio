@@ -340,3 +340,62 @@ h5{
   .box-6{
       display: none;
   }
+
+  /* ---------------------------Adding the Responsive ------------------------- */
+
+  @media screen and (max-width: 980px) {
+    body {
+      background-color: #888;
+    }
+  
+    .wrapper {
+      padding: 40px;
+    }
+  
+    #main-content,
+    #sidebar {
+      width: 49%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    body {
+      background-color: #333;
+    }
+  
+    .wrapper {
+      /* Box-model */
+      width: 100%;
+      padding: 20px;
+    }
+  
+    #main-content,
+    #sidebar {
+      width: 100%;
+    }
+  
+    #sidebar {
+      margin-top: 40px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    body {
+      background-color: #333;
+    }
+  
+    .wrapper {
+      /* Box-model */
+      width: 100%;
+      padding: 20px;
+    }
+  
+    #main-content,
+    #sidebar {
+      width: 100%;
+    }
+  
+    #sidebar {
+      margin-top: 40px;
+    }
+  }
