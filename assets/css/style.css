@@ -227,32 +227,6 @@ h5{
 /* --------------------------------Profile Additions----------------------------------------------------------------- */
 
 
-/* Replaced the AboutMe with the below to so that it will not mess information is not going with the bod just for testing */
-/* .Port{
-    
-    background: #ffffff;
-    /* border: 100px solid #dddddd; */
-    /* padding: 1%; */
-    /* Instead of doing the border around it need to 
-    specify the area using the margin: 0 auto; centers the information */
-   
-    /* margin: 0 auto; */ */
-    
-    /* Using the width at a 100 will then all to indicate the max of the width */
-    /* width: 100%;
-    max-width: 960px;
-    margin-top: 10px;
-    margin-bottom: 30px; */
-    /* Add for flare later */
-    /* border-radius: 100px; */
-    /* clear: both; */
-    /* Checking to see if this will fix the issue so that it goes within the image box */
-    /* position: relative;
-        overflow: auto; */
-
-}
-
-
 .img-box {
     width: 280px;
     height: 230px;
@@ -308,28 +282,19 @@ h5{
 
   .box-4-1,
   .box-1-1{
-    /* bottom: 10px; */
-    /* left: 10px; */
-    top:260px;
-  /* z-index: 3; */  
+     top:260px;
     z-index: 3;
   }
 
   .box-5-1,
   .box-2-1{
-    /* bottom: 10px; */
-    /* left: 10px; */
     top:510px;
-    /* left: 15px; */
     z-index: 3;
   }
 
 
   .box-3-1{
     bottom: 35px;
-    /* left: 10px; */
-    /* top:750px; */
-    /* z-index: 3; */
     left: 15px;
 
 
@@ -344,58 +309,66 @@ h5{
   /* ---------------------------Adding the Responsive ------------------------- */
 
   @media screen and (max-width: 980px) {
-    body {
-      background-color: #888;
-    }
   
-    .wrapper {
-      padding: 40px;
-    }
   
-    #main-content,
-    #sidebar {
-      width: 49%;
+    .Topbox{
+        top: 0%;
+        left: 50px;
+        margin: 0%      
+    
+    }
+
+    .nav{
+            /* right: 5%; */
+            margin-inline-end: -150px;
+    }
+
+    .AboutBox{
+      
+        max-width: 560px;
+        margin-left: 50px;
+
     }
   }
   
   @media screen and (max-width: 768px) {
-    body {
-      background-color: #333;
+    .Topbox{
+        top: 0%;
+        left: 50px;
+        margin: 0%      
+    
     }
-  
-    .wrapper {
-      /* Box-model */
-      width: 100%;
-      padding: 20px;
+
+    .nav{
+            /* right: 5%; */
+            margin-inline-end: -150px;
     }
-  
-    #main-content,
-    #sidebar {
-      width: 100%;
-    }
-  
-    #sidebar {
-      margin-top: 40px;
+
+    .AboutBox{
+      
+        max-width: 560px;
+        margin-left: 50px;
+
     }
   }
 
   @media screen and (max-width: 640px) {
-    body {
-      background-color: #333;
+    .Topbox{
+        top: 0%;
+        left: 50px;
+        margin: 0%      
+    
     }
-  
-    .wrapper {
-      /* Box-model */
-      width: 100%;
-      padding: 20px;
+
+    .nav{
+            /* right: 5%; */
+            margin-inline-end: -150px;
     }
-  
-    #main-content,
-    #sidebar {
-      width: 100%;
-    }
-  
-    #sidebar {
-      margin-top: 40px;
+
+    .AboutBox{
+      
+        max-width: 560px;
+        margin-left: 50px;
+
     }
   }
