@@ -310,6 +310,10 @@ h5{
 
   @media screen and (max-width: 980px) {
   
+li{
+
+    float: right;
+}
   
     .Topbox{
         top: 0%;
@@ -320,7 +324,7 @@ h5{
 
     .nav{
             /* right: 5%; */
-            margin-inline-end: -150px;
+            /* margin-inline-end: -150px; */
     }
 
     .AboutBox{
@@ -332,6 +336,22 @@ h5{
   }
   
   @media screen and (max-width: 768px) {
+
+li{
+
+    float: right;
+}
+    header{
+   
+
+        padding: 38px 0;
+        margin: 0;
+        width: 10% 20%;
+
+    
+    }
+    
+       
     .Topbox{
         top: 0%;
         left: 50px;
@@ -341,7 +361,7 @@ h5{
 
     .nav{
             /* right: 5%; */
-            margin-inline-end: -150px;
+            margin-inline-end: -160px;
     }
 
     .AboutBox{
