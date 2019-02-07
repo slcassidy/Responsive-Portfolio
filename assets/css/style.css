@@ -366,7 +366,6 @@ h5{
     float: right;
     }
 
-  
        
     .Topbox{
         top: 0%;
@@ -398,4 +397,48 @@ h5{
         max-width: 560px;
         margin-left: 50px;
     }
+    #box-set1,
+    #box-set2{
+      /* position: relative;   */
+      float: right;
+      overflow: hidden;
+        
+    }
+
+    .label-box {
+   
+        background: #6c4aaa;
+        display: none;       
+      }
+   
+    .box-1-1{
+       top:260px;
+      z-index: 100;
+    }
+
+    .box-1-4{
+        z-index: -100;
+       display: none; 
+       
+     }
+
+ 
+/* 
+    .box-4-1,
+    .box-1-1{
+       top:260px;
+      z-index: 3;
+    } */
+  
+    .box-5-1,
+    .box-2-1{
+      top:510px;
+      z-index: 3;
+    }
+  
+  
+    .box-3-1{
+      bottom: 35px;
+      left: 15px;
+
   }
