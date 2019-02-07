@@ -81,6 +81,7 @@ li{
     padding: 16px;
     font: bold;
     /* font-size: 95%; */
+    
 }
 
 li:hover{
@@ -308,12 +309,39 @@ h5{
 
   /* ---------------------------Adding the Responsive ------------------------- */
 
+  @media screen and (max-width: 1173px) {
+  
+    li{    
+        float: right;    
+    }
+    .Topbox{
+        top: 0%;
+        left: 50px;
+        margin: 0%      
+    
+    }
+}
+
+@media screen and (max-width: 1019px) {
+  
+    li{    
+        float: right;
+    }
+
+    .Topbox{
+        top: 0%;
+        left: 50px;
+        margin: 0%      
+    
+    }
+}
+  
+  
   @media screen and (max-width: 980px) {
   
-li{
-
+    li{
     float: right;
-}
+    }   
   
     .Topbox{
         top: 0%;
@@ -322,10 +350,6 @@ li{
     
     }
 
-    .nav{
-            /* right: 5%; */
-            /* margin-inline-end: -150px; */
-    }
 
     .AboutBox{
       
@@ -337,58 +361,41 @@ li{
   
   @media screen and (max-width: 768px) {
 
-li{
+    li{
 
     float: right;
-}
-    header{
-   
-
-        padding: 38px 0;
-        margin: 0;
-        width: 10% 20%;
-
-    
     }
-    
+
+  
        
     .Topbox{
         top: 0%;
         left: 50px;
-        margin: 0%      
-    
+        margin: 0%;      
     }
 
-    .nav{
-            /* right: 5%; */
-            margin-inline-end: -160px;
-    }
 
-    .AboutBox{
-      
+    .AboutBox{      
         max-width: 560px;
         margin-left: 50px;
-
     }
   }
 
   @media screen and (max-width: 640px) {
+    li{
+        float: right;
+    }
+    
     .Topbox{
         top: 0%;
         left: 50px;
-        margin: 0%      
-    
+        margin: 0%    
     }
 
-    .nav{
-            /* right: 5%; */
-            margin-inline-end: -150px;
-    }
+
 
     .AboutBox{
-      
         max-width: 560px;
         margin-left: 50px;
-
     }
   }
