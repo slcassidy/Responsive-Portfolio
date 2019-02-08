@@ -287,7 +287,7 @@ h5{
 
   .box-3-1{
     bottom: 35px;
-    left: 15px;
+    /* left: 15px; */
 
 
     /* Trying to show a bottom area that is in the portfolio box a litte more */
@@ -352,29 +352,36 @@ h5{
   
     .box-1-1{
        top:260px;
+       width: 285px;
       z-index: 3;
     }
 
     .box-4-1{
        top:1020px;
+       width: 285px;
       z-index: 3;
     }
   
 
     .box-2-1{
+
       top:510px;
       z-index: 3;
+      width: 285px;
     }
 
     .box-5-1{
-      top:510px;
-      z-index: 3;
+  
+      top: 1260px;
+      width: 285px;
     }
   
   
     .box-3-1{
-      bottom: 35px;
-      left: 15px;
+  
+      top:755px;
+      z-index: 3;
+      width: 280px;
 
   }
   
@@ -417,51 +424,7 @@ h5{
         max-width: 560px;
         margin-left: 50px;
     }
-    /* #box-set1,
-    #box-set2{
-   
-      float: right;
-      overflow: hidden;
-        
-    } */
-
-    .label-box {
-        /* top:460px; */
-        background: #6c4aaa;
-        /* display: none !important;        */
-      }
-   
-    .box-1-1{
-       top:260px;
-      z-index: 100;
-    }
-
-    .box-4-1{
-        /* z-index: -100; */
-       /* display: none;  */
-       top:400px;
-       background: #6c4aaa;
-       z-index: 100;
-     }
-
+  
  
-/* 
-    .box-4-1,
-    .box-1-1{
-       top:260px;
-      z-index: 3;
-    } */
-  
-    .box-5-1,
-    .box-2-1{
-      top:510px;
-      z-index: 3;
-    }
-  
-  
-    .box-3-1{
-      bottom: 35px;
-      left: 15px;
-  }
 
 }
